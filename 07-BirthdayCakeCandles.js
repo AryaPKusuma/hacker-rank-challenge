@@ -25,8 +25,28 @@ function birthdayCakeCandles(candles) {
     return result
 }
 
-const candles = [4,4,2,1,]
+const candles = [4,4,2,1, 7, 7, 7]
 
 console.log(birthdayCakeCandles(candles))
 
 
+// another answer, using every() method array instead for loop
+function birthdayCakeCandlesV2(candles){
+    let result = 0
+    const sortCandles = [...candles].sort((a,b)=> b-a)
+
+    /*
+    use every loop, looping on each element of array, stop when it finds false condition
+    */ 
+    const check = sortCandles.every((num, index) => {
+        result++;
+        /*
+        I found something here, if I use num < sortCandles[index+1] then the result is false, 
+        in false condition every() will stop. if I use num <= sortCandles[index+1] then the result will be true
+        */ 
+        return num <= sortCandles[index+1]
+    })
+    return result;
+}
+
+console.log(birthdayCakeCandlesV2(candles))

@@ -41,8 +41,8 @@ function birthdayCakeCandlesV2(candles){
     const check = sortCandles.every((num, index) => {
         result++;
         /*
-        I found something here, if I use num < sortCandles[index+1] then the result is false, 
-        in false condition every() will stop. if I use num <= sortCandles[index+1] then the result will be true
+        if Im use num < sortCandles[index+1] then the result is false, 
+        in false condition every() will stop. if Im use num <= sortCandles[index+1] then the result will be true
         */ 
         return num <= sortCandles[index+1]
     })

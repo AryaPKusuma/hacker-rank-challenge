@@ -10,8 +10,3 @@ function staircase(n) {
 }
 
 staircase(6)
-
-// const char = "####"
-
-// console.log(char.padStart(10, ' '))
-// console.log(char.padStart(3, ' '))
